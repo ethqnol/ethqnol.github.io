@@ -3,11 +3,11 @@
 	const images = import.meta.glob('/static/planes/*', { eager: true, query: { enhanced: true } });
 
 	const image_entries = Object.entries(images);
-	let IMAGES_PER_PAGE = 9;
+	let IMAGES_PER_PAGE = 3;
 
 	let current_page = 1;
 	let total_pages = Math.ceil(image_entries.length / IMAGES_PER_PAGE);
-
+	
 	let active_image: string | null = null;
 
 	function open_img(path: string) {
@@ -36,17 +36,19 @@
 <section>
     <div class="slider-container">
 		<label for="per-page">Images per page: {IMAGES_PER_PAGE}</label>
-        <input type="range" min="1" max="10" id="per-page" on:input={(e) => {
+        <input type="range" min="1" max={Math.floor(image_entries.length/3)} value={IMAGES_PER_PAGE} id="per-page" on:input={(e) => {
           IMAGES_PER_PAGE = parseInt((e.target! as HTMLInputElement).value)
           current_page = 1;
           total_pages = Math.ceil(image_entries.length / IMAGES_PER_PAGE);
         }} />
     </div>
-    
+    <div class="slider-container">
+        <i> Note: Image file sizes are large so image loading will be delayed on page switch</i>
+    </div>
 	<div class="image-grid">
 		{#each image_entries.slice((current_page - 1) * IMAGES_PER_PAGE, current_page * IMAGES_PER_PAGE) as [_path, _]}
 		    <button class="image-button" on:click={() => open_img(_path.split('/').slice(1).slice(-2).join("/"))}>
-						<img src={_path.split('/').slice(1).slice(-2).join("/")} alt="Plane" />
+						<img loading="lazy" src={_path.split('/').slice(1).slice(-2).join("/")} alt="Plane" />
 			</button>
 			
 		{/each}
