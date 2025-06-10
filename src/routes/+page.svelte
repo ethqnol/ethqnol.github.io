@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Counter from './Counter.svelte';
-	const images = import.meta.glob('$lib/images/planes/*', { eager: true, query: { enhanced: true } });
+	const images = import.meta.glob('/static/planes/*', { eager: true, query: { enhanced: true } });
 
 	const image_entries = Object.entries(images);
 	let IMAGES_PER_PAGE = 9;
@@ -26,18 +26,6 @@
 		if (current_page > 1) current_page--;
 	}
 	
-	
-	import { goto } from '$app/navigation';
-    
-    function handle_overlay_image_click(e: MouseEvent) {
-    		e.stopPropagation();
-    		let filename = active_image?.split('/').pop();
-            filename = filename?.split('.')[0];
-            console.log(filename)
-            if (filename) {
-     			goto(`/image/${filename}`);
-    		}
-    }
 </script>
 
 <svelte:head>
@@ -57,8 +45,8 @@
     
 	<div class="image-grid">
 		{#each image_entries.slice((current_page - 1) * IMAGES_PER_PAGE, current_page * IMAGES_PER_PAGE) as [_path, _]}
-		    <button class="image-button" on:click={() => open_img(_path)}>
-						<img src={_path} alt="Plane" />
+		    <button class="image-button" on:click={() => open_img(_path.split('/').slice(1).slice(-2).join("/"))}>
+						<img src={_path.split('/').slice(1).slice(-2).join("/")} alt="Plane" />
 			</button>
 			
 		{/each}
@@ -73,7 +61,7 @@
 	{#if active_image}
 		<button class="overlay" on:click={close_img}>
 		    <!-- svelte-ignore <a11y_click_events_have_key_events> -->
-			<img src={active_image} alt="Full aircraft" class="enlarged" on:click={handle_overlay_image_click} />
+			<img src={active_image} alt="Full aircraft" class="enlarged"/>
 		</button>
 	{/if}
 </section>
