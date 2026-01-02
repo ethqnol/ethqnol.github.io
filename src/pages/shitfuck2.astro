@@ -7,7 +7,7 @@ const { openers, subjects, verbs, objects, clauses } = vocabulary;
 
 function generateLegalese() {
     // 22% chance of a dedicated "Specific Clause"
-    if (Math.random() < 0.22) {
+    if (Math.random() < 0.3) {
         const randomClause =
             clauses[Math.floor(Math.random() * clauses.length)];
         return `<div class="font-bold text-black my-4 border-l-4 border-indigo-600 pl-4 py-2 bg-indigo-50/50 transform rotate-1">${randomClause}</div>`;
