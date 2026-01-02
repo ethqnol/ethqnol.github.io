@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import fs from "node:fs";
+import path from "node:path";
+
+const publicDir = path.join(process.cwd(), "public/plane");
+const files = fs.readdirSync(publicDir);
+const photos = files.filter((file) => {
+    const ext = path.extname(file).toLowerCase();
+    return [".jpg", ".jpeg", ".png", ".webp", ".gif"].includes(ext);
+});
+---
+
+<Layout title="Airplane Photos | Ethan Wu">
+    <main class="min-h-screen py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <a
+                    href="/"
+                    class="text-neutral-400 hover:text-white transition-colors mb-4 inline-block"
+                    >← Back to Home</a
+                >
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                    Aviation Photography
+                </h1>
+                <p class="text-neutral-400">plen.</p>
+            </div>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+                {
+                    photos.map((photo) => (
+                        <div class="relative group overflow-hidden rounded-xl break-inside-avoid">
+                            <img
+                                src={`/plane/${photo}`}
+                                alt={photo}
+                                class="w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy"
+                            />
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                        </div>
+                    ))
+                }
+            </div>
+            {
+                photos.length === 0 && (
+                    <p class="text-neutral-500 text-center py-20">
+                        No photos found in the gallery.
+                    </p>
+                )
+            }
+        </div>
+    </main>
+</Layout>

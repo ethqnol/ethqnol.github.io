@@ -1,0 +1,110 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Ethan Wu | Education">
+    <main class="min-h-screen py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <a
+                href="/"
+                class="text-neutral-400 hover:text-white transition-colors mb-8 inline-block"
+                >← Back to Home</a
+            >
+            <h1 class="text-4xl font-bold text-white mb-4">
+                Education & Skills
+            </h1>
+            <p class="text-xl text-neutral-400 mb-12">
+                Incoming freshman at Northwestern University studying Operations
+                Research and Computer Science.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                {/* Coursework */}
+                <div class="space-y-8">
+                    <h2
+                        class="text-2xl font-bold text-white border-b border-neutral-800 pb-4"
+                    >
+                        Relevant Coursework
+                    </h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-neutral-200">
+                                Mathematics, CS, & OR
+                            </h3>
+                            <ul
+                                class="list-disc list-inside text-neutral-400 mt-2 space-y-1"
+                            >
+                                <li>Multivariable Calculus</li>
+                                <li>Linear Algebra</li>
+                                <li>Real Analysis</li>
+                                <li>AP Calculus BC</li>
+                                <li>AP Statistics</li>
+                                <li>AP Computer Science A</li>
+                                <li>Linear Programming</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Skills */}
+                <div class="space-y-8">
+                    <h2
+                        class="text-2xl font-bold text-white border-b border-neutral-800 pb-4"
+                    >
+                        Technical Skills
+                    </h2>
+
+                    {/* Tools */}
+                    <div class="space-y-4">
+                        <h3
+                            class="text-sm font-bold text-neutral-500 uppercase tracking-wider mb-2"
+                        >
+                            Tools
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                [
+                                    "Python",
+                                    "Rust",
+                                    "PyTorch",
+                                    "Jax",
+                                    "LLVM",
+                                    "SQL",
+                                    "Git",
+                                    "Docker",
+                                ].map((skill) => (
+                                    <span class="px-3 py-1 bg-neutral-900 rounded-full text-neutral-300 text-sm border border-neutral-800">
+                                        {skill}
+                                    </span>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3
+                            class="text-sm font-bold text-neutral-500 uppercase tracking-wider mb-2"
+                        >
+                            Concepts
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            {
+                                [
+                                    "Machine Learning",
+                                    "Deep Learning",
+                                    "Compilers",
+                                    "Optimization",
+                                    "Data Science",
+                                ].map((skill) => (
+                                    <span class="px-3 py-1 bg-neutral-900 rounded-full text-neutral-300 text-sm border border-neutral-800">
+                                        {skill}
+                                    </span>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

@@ -1,0 +1,175 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BentoItem from "../components/BentoItem.astro";
+---
+
+<Layout title="Ethan Wu | Projects">
+    <main class="min-h-screen py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <a
+                href="/"
+                class="text-neutral-400 hover:text-white transition-colors mb-8 inline-block"
+                >← Back to Home</a
+            >
+            <h1 class="text-4xl font-bold text-white mb-12">
+                Featured Projects
+            </h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* cox-hazards */}
+                <div
+                    class="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-neutral-700 transition-colors"
+                >
+                    <div class="flex justify-between items-start mb-2">
+                        <h2 class="text-2xl font-bold text-white">
+                            cox-hazards
+                        </h2>
+                        <span
+                            class="text-neutral-500 text-xs font-mono bg-neutral-800 px-2 py-1 rounded"
+                        >
+                            ~958 dl
+                        </span>
+                    </div>
+                    <p class="text-neutral-400 text-sm mb-4">
+                        Rust, Machine Learning, Optimization
+                    </p>
+                    <p class="text-neutral-300 leading-relaxed mb-6">
+                        A high-performance Rust package for Cox proportional
+                        hazards models. Includes elastic net regularization,
+                        multiple optimizer choices, and is designed for speed
+                        and flexibility in survival analysis problems.
+                    </p>
+                </div>
+
+                {/* kategorize */}
+                <div
+                    class="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-neutral-700 transition-colors"
+                >
+                    <div class="flex justify-between items-start mb-2">
+                        <h2 class="text-2xl font-bold text-white">
+                            kategorize
+                        </h2>
+                        <span
+                            class="text-neutral-500 text-xs font-mono bg-neutral-800 px-2 py-1 rounded"
+                        >
+                            ~914 dl
+                        </span>
+                    </div>
+                    <p class="text-neutral-400 text-sm mb-4">
+                        Rust, Clustering, High Performance
+                    </p>
+                    <p class="text-neutral-300 leading-relaxed mb-6">
+                        A highly optimized Rust implementation of the k-modes
+                        clustering algorithm.
+                    </p>
+                </div>
+
+                {/* JAX-KMeans */}
+                <div
+                    class="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-neutral-700 transition-colors"
+                >
+                    <h2 class="text-2xl font-bold text-white mb-2">
+                        JAX-KMeans
+                    </h2>
+                    <p class="text-neutral-400 text-sm mb-4">
+                        Python, JAX, High-Performance Computing
+                    </p>
+                    <p class="text-neutral-300 leading-relaxed mb-6">
+                        Open-source, JIT-optimized Python library for K-means
+                        clustering. Leverages JAX for hardware acceleration
+                        (GPU/TPU).
+                    </p>
+                </div>
+
+                {/* Match Predictor Network */}
+                <div
+                    class="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-neutral-700 transition-colors"
+                >
+                    <h2 class="text-2xl font-bold text-white mb-2">
+                        Match Predictor Network
+                    </h2>
+                    <p class="text-neutral-400 text-sm mb-4">
+                        Deep Learning, PyTorch
+                    </p>
+                    <p class="text-neutral-300 leading-relaxed mb-6">
+                        Open-weight neural network for predicting robotics match
+                        outcomes. Achieved 75% accuracy in a complex, dynamic
+                        environment.
+                    </p>
+                </div>
+
+                {/* Salmon Language */}
+                <div
+                    class="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-neutral-700 transition-colors"
+                >
+                    <h2 class="text-2xl font-bold text-white mb-2">
+                        Salmon Language
+                    </h2>
+                    <p class="text-neutral-400 text-sm mb-4">
+                        LLVM, Rust, Compiler Design
+                    </p>
+                    <p class="text-neutral-300 leading-relaxed mb-6">
+                        Compiled programming language with an LLVM backend.
+                        Supports primitives, non-scalar data, first-class
+                        functions, variable assignment, and loops.
+                    </p>
+                </div>
+
+                {/* ockham */}
+                <div
+                    class="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-neutral-700 transition-colors"
+                >
+                    <div class="flex justify-between items-start mb-2">
+                        <h2 class="text-2xl font-bold text-white">ockham</h2>
+                        <span
+                            class="text-neutral-500 text-xs font-mono bg-neutral-800 px-2 py-1 rounded"
+                        >
+                            ~35 dl
+                        </span>
+                    </div>
+                    <p class="text-neutral-400 text-sm mb-4">
+                        Rust, Operations Research, Optimization
+                    </p>
+                    <p class="text-neutral-300 leading-relaxed mb-6">
+                        A collection of operations research tools
+                        and solvers. Includes implementations for various
+                        optimization problems.
+                    </p>
+                </div>
+
+                {/* School History Platform */}
+                <div
+                    class="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-neutral-700 transition-colors"
+                >
+                    <h2 class="text-2xl font-bold text-white mb-2">
+                        YAPP (Yet Another Paper Planner)
+                    </h2>
+                    <p class="text-neutral-400 text-sm mb-4">
+                        Community Impact Project
+                    </p>
+                    <p class="text-neutral-300 leading-relaxed mb-6">
+                        Research tracking platform for students. Automates
+                        citations and organizes historical data.
+                    </p>
+                </div>
+
+                {/* MIT Websites */}
+                <div
+                    class="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-neutral-700 transition-colors"
+                >
+                    <h2 class="text-2xl font-bold text-white mb-2">
+                        MIT Jameel Clinic Infra Tools
+                    </h2>
+                    <p class="text-neutral-400 text-sm mb-4">
+                        Infrastructure & Distribution
+                    </p>
+                    <p class="text-neutral-300 leading-relaxed mb-6">
+                        Software distribution maps and portals for the Jameel
+                        Clinic. Improves accessibility of resources and directly
+                        impacts the research community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>

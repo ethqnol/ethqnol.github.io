@@ -1,0 +1,358 @@
+---
+import Layout from "../layouts/Layout.astro";
+import vocabulary from "../data/terms_vocabulary.json";
+
+// Server-side generation logic (SSG)
+const { openers, subjects, verbs, objects, clauses } = vocabulary;
+
+function generateLegalese() {
+    // 22% chance of a dedicated "Specific Clause"
+    if (Math.random() < 0.22) {
+        const randomClause =
+            clauses[Math.floor(Math.random() * clauses.length)];
+        return `<div class="font-bold text-black my-4 border-l-4 border-indigo-600 pl-4 py-2 bg-indigo-50/50 transform rotate-1">${randomClause}</div>`;
+    }
+
+    const numSentences = Math.floor(Math.random() * 3) + 2;
+    let text = "";
+
+    for (let i = 0; i < numSentences; i++) {
+        const op = openers[Math.floor(Math.random() * openers.length)];
+        const sub = subjects[Math.floor(Math.random() * subjects.length)];
+        const v = verbs[Math.floor(Math.random() * verbs.length)];
+        const obj = objects[Math.floor(Math.random() * objects.length)];
+        let sentence = `${op} ${sub} ${v} ${obj}. `;
+        text += sentence;
+    }
+    return text;
+}
+
+function generateClauseHTML(index) {
+    const headerTypes = [
+        "Section",
+        "Article",
+        "Clause",
+        "Stipulation",
+        "Addendum",
+        "Paragraph",
+        "Prophecy",
+        "Whisper",
+        "Revelation",
+        "Ultimatum",
+        "Suggestion",
+        "Dream",
+        "Sentence",
+        "Fragment",
+        "Error",
+        "Warning",
+        "Exception",
+    ];
+    const randomType =
+        headerTypes[Math.floor(Math.random() * headerTypes.length)];
+    let sectionNum = "";
+    const numType = Math.random();
+
+    if (numType < 0.2) {
+        sectionNum = Math.floor(Math.random() * 9000) + 100;
+    } else if (numType < 0.5) {
+        const symbols = [
+            "???",
+            "!!!",
+            "X",
+            "Ω",
+            "∞",
+            "NaN",
+            "null",
+            "undefined",
+            "å",
+            "∫",
+            "∑∑∑",
+            "†",
+            "∆",
+            "abc",
+            "§",
+            "¶",
+        ];
+        sectionNum = symbols[Math.floor(Math.random() * symbols.length)];
+    } else if (numType < 0.7) {
+        sectionNum =
+            Math.random() > 0.5
+                ? -Math.floor(Math.random() * 100)
+                : (Math.random() * 100).toFixed(4);
+    } else {
+        sectionNum = [
+            "Redacted",
+            "Unknown",
+            "Pending",
+            "Void",
+            "Null",
+            "Deleted",
+        ][Math.floor(Math.random() * 6)];
+    }
+
+    const title = `${randomType} ${sectionNum}: ${subjects[Math.floor(Math.random() * subjects.length)]} vs. ${objects[Math.floor(Math.random() * objects.length)]}`;
+    const body = generateLegalese();
+
+    return `
+        <div class="group">
+            <h3 class="text-lg font-black text-black mb-2 mt-8 font-sans uppercase tracking-wider">${title}</h3>
+            <p class="text-black/90">${body}</p>
+        </div>
+    `;
+}
+
+const initialClauses = Array.from({ length: 20 }, (_, i) =>
+    generateClauseHTML(i),
+);
+---
+
+<Layout title="Terms of Service | Important">
+    <main
+        class="min-h-screen bg-gray-900 font-serif flex justify-center items-start py-12 px-4 md:px-0"
+    >
+        <div
+            class="fixed top-4 z-50 bg-red-600 text-white px-6 py-3 rounded-full shadow-xl font-sans font-bold text-sm tracking-wide animate-bounce flex items-center gap-2 border-4 border-yellow-400 transform -rotate-2"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+            >
+                <path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            YOU MUST SCROLL TO THE BOTTOM TO ACCEPT
+        </div>
+
+        <div
+            class="w-full max-w-4xl bg-gradient-to-br from-pink-300 via-purple-300 to-indigo-400 animate-gradient-xy shadow-4xl min-h-[50vh] relative border-4 border-dashed border-yellow-400 transform rotate-1"
+        >
+            <style>
+                @keyframes gradient-xy {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+                .animate-gradient-xy {
+                    background-size: 200% 200%;
+                    animation: gradient-xy 3s ease infinite;
+                }
+                .shadow-4xl {
+                    box-shadow: 0 0 60px -15px rgba(255, 0, 255, 0.6);
+                }
+            </style>
+
+            <div
+                class="border-b-4 border-black p-12 bg-white/50 backdrop-blur-sm"
+            >
+                <h1
+                    class="text-4xl font-black text-black mb-2 uppercase tracking-tighter drop-shadow-sm font-sans transform -rotate-1"
+                >
+                    Terms of Service
+                </h1>
+                <p class="text-neutral-800 font-bold italic text-sm">
+                    Last Updated: 5/14/1342
+                </p>
+                <p
+                    class="text-black font-medium mt-4 text-justify leading-relaxed text-sm"
+                >
+                    Please read these terms carefully. By existing on this plane
+                    of reality, you agree to be bound by the conditions set
+                    forth below, including but not limited to the surrender of
+                    your first-born uncertainty.
+                </p>
+            </div>
+
+            <div
+                id="content"
+                class="p-12 text-black font-medium space-y-6 leading-relaxed text-justify text-[1.05rem] bg-white/30 backdrop-blur-md"
+            >
+                {initialClauses.map((html) => <div set:html={html} />)}
+            </div>
+
+            <div
+                id="sentinel"
+                class="h-32 w-full flex items-center justify-center"
+            >
+                <div
+                    class="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 opacity-20"
+                >
+                </div>
+            </div>
+
+            <div
+                class="p-8 bg-gray-100 border-t border-gray-200 flex flex-col items-center gap-4"
+            >
+                <p class="text-xs text-gray-500 font-sans">
+                    You are currently at <span id="scroll-percent">0.00001</span
+                    >% of the document.
+                </p>
+                <button
+                    disabled
+                    class="bg-gray-300 text-gray-500 font-sans font-bold py-3 px-8 rounded cursor-not-allowed opacity-50 uppercase tracking-wider"
+                >
+                    I Accept These Terms
+                </button>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<script define:vars={{ vocabulary }}>
+    document.addEventListener("astro:page-load", () => {
+        const contentDiv = document.getElementById("content");
+        const sentinel = document.getElementById("sentinel");
+        const dateSpan = document.getElementById("date");
+        const scrollPercent = document.getElementById("scroll-percent");
+
+        if (dateSpan) dateSpan.innerText = new Date().toLocaleDateString();
+
+        let clauseCount = 20; // Start with SSG count
+
+        const { openers, subjects, verbs, objects, clauses } = vocabulary;
+
+        function generateLegalese() {
+            if (Math.random() < 0.22) {
+                const randomClause =
+                    clauses[Math.floor(Math.random() * clauses.length)];
+                return `<div class="font-bold text-black my-4 border-l-4 border-indigo-600 pl-4 py-2 bg-indigo-50/50 transform rotate-1">${randomClause}</div>`;
+            }
+
+            const numSentences = Math.floor(Math.random() * 3) + 2;
+            let text = "";
+
+            for (let i = 0; i < numSentences; i++) {
+                const op = openers[Math.floor(Math.random() * openers.length)];
+                const sub =
+                    subjects[Math.floor(Math.random() * subjects.length)];
+                const v = verbs[Math.floor(Math.random() * verbs.length)];
+                const obj = objects[Math.floor(Math.random() * objects.length)];
+                let sentence = `${op} ${sub} ${v} ${obj}. `;
+                text += sentence;
+            }
+            return text;
+        }
+
+        function addClause() {
+            if (!contentDiv) return;
+
+            const wrapper = document.createElement("div");
+            wrapper.className = "group";
+
+            const title = document.createElement("h3");
+            title.className =
+                "text-lg font-black text-black mb-2 mt-8 font-sans uppercase tracking-wider";
+
+            const headerTypes = [
+                "Section",
+                "Article",
+                "Clause",
+                "Stipulation",
+                "Addendum",
+                "Paragraph",
+                "Prophecy",
+                "Whisper",
+                "Revelation",
+                "Ultimatum",
+                "Suggestion",
+                "Dream",
+                "Sentence",
+                "Fragment",
+                "Error",
+                "Warning",
+                "Exception",
+            ];
+            const randomType =
+                headerTypes[Math.floor(Math.random() * headerTypes.length)];
+
+            let sectionNum = "";
+            const numType = Math.random();
+
+            if (numType < 0.2) {
+                sectionNum = Math.floor(Math.random() * 9000) + 100;
+            } else if (numType < 0.5) {
+                const symbols = [
+                    "???",
+                    "!!!",
+                    "X",
+                    "Ω",
+                    "∞",
+                    "NaN",
+                    "null",
+                    "undefined",
+                    "å",
+                    "∫",
+                    "∑∑∑",
+                    "†",
+                    "∆",
+                    "abc",
+                    "§",
+                    "¶",
+                ];
+                sectionNum =
+                    symbols[Math.floor(Math.random() * symbols.length)];
+            } else if (numType < 0.7) {
+                sectionNum =
+                    Math.random() > 0.5
+                        ? -Math.floor(Math.random() * 100)
+                        : (Math.random() * 100).toFixed(4);
+            } else {
+                sectionNum = [
+                    "Redacted",
+                    "Unknown",
+                    "Pending",
+                    "Void",
+                    "Null",
+                    "Deleted",
+                ][Math.floor(Math.random() * 6)];
+            }
+
+            title.innerText = `${randomType} ${sectionNum}: ${subjects[Math.floor(Math.random() * subjects.length)]} vs. ${objects[Math.floor(Math.random() * objects.length)]}`;
+
+            const p = document.createElement("p");
+            p.className = "text-black/90";
+            p.innerHTML = generateLegalese();
+
+            wrapper.appendChild(title);
+            wrapper.appendChild(p);
+            contentDiv.appendChild(wrapper);
+
+            clauseCount++;
+
+            if (scrollPercent) {
+                const val = (1 / (clauseCount * 10)).toFixed(7);
+                scrollPercent.innerText = val;
+            }
+        }
+
+        // Client-side hydration: Replace static SSG content with fresh random content
+        if (contentDiv) contentDiv.innerHTML = "";
+        clauseCount = 0;
+
+        for (let i = 0; i < 20; i++) {
+            addClause();
+        }
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        for (let i = 0; i < 10; i++) addClause();
+                    }
+                });
+            },
+            { rootMargin: "400px" },
+        );
+
+        if (sentinel) observer.observe(sentinel);
+    });
+</script>
