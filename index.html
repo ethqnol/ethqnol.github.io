@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethan Wu</title>
+  <meta name="description" content="Ethan Wu — Incoming Northwestern CS & IEMS, ML research intern at MIT Jameel Clinic. Systems and numerical package author.">
+  <meta name="author" content="Ethan Wu">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ethan Wu">
+  <meta property="og:description" content="Incoming Northwestern CS & IEMS, ML research intern at MIT Jameel Clinic. Systems and numerical package author.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ethqnol.github.io">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;450;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-container">
+    <!-- Left Column: Sticky Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <header class="identity-header">
+          <h1 class="name"><a href="/">Ethan Wu</a></h1>
+          <p class="bio-text">
+            Incoming undergraduate at <strong>Northwestern University</strong> studying Computer Science &amp; Operations Research (IEMS), and machine learning research intern at the <strong>MIT Jameel Clinic</strong>.
+          </p>
+        </header>
+
+        <!-- Navigation Links -->
+        <nav class="sidebar-nav" aria-label="Sections">
+          <a href="#education" class="nav-link active">
+            <span class="nav-line"></span>
+            <span class="nav-title">Education &amp; Skills</span>
+          </a>
+          <a href="#projects" class="nav-link">
+            <span class="nav-line"></span>
+            <span class="nav-title">Software &amp; Systems</span>
+          </a>
+          <a href="#research" class="nav-link">
+            <span class="nav-line"></span>
+            <span class="nav-title">Research Experience</span>
+          </a>
+        </nav>
+
+        <!-- Compact "Were you looking for:" Suggestion Box -->
+        <div class="sidebar-suggestion">
+          <div class="suggestion-label">Were you looking for?</div>
+          <ul class="suggestion-list">
+            <li>
+              <a href="/Kluster-Fudge">
+                /Kluster-Fudge <span class="ext-arrow">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="/strata-mojo">
+                /strata-mojo <span class="ext-arrow">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="/chem">
+                /chem <span class="ext-arrow">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="/nn-demo">
+                /nn-demo <span class="ext-arrow">↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sidebar Footer & Links -->
+        <div class="sidebar-footer">
+          <a href="ewu-resume.pdf" class="resume-btn" download target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Resume (PDF)</span>
+          </a>
+
+          <div class="social-bar">
+            <a href="https://github.com/ethqnol" target="_blank" rel="noopener" class="social-link" aria-label="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/ethan-wu-3b908a2a4/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.65 1.65 0 1 0-.01-3.3 1.65 1.65 0 0 0 .01 3.3m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+            </a>
+            <a href="mailto:ewu@u.northwestern.edu" class="social-link" aria-label="Email Ethan Wu">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+          <div class="sidebar-contact-text">ewu@u.northwestern.edu</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Column: Main Canvas Content -->
+    <main class="main-canvas">
+
+      <!-- 1. EDUCATION & SKILLS -->
+      <section id="education" class="page-section">
+        <div class="section-title-wrap">
+          <h2 class="section-heading">Education &amp; Skills</h2>
+        </div>
+
+        <div class="education-grid">
+          <!-- Northwestern -->
+          <div class="edu-card">
+            <div class="edu-card-top">
+              <span class="edu-school-name">Northwestern University</span>
+              <span class="edu-tag">2026 &ndash; 2030</span>
+            </div>
+            <div class="edu-degree-text">Incoming, Computer Science &amp; Operations Research (IEMS)</div>
+            <div class="edu-location-text">Evanston, IL</div>
+          </div>
+
+          <!-- Commonwealth -->
+          <div class="edu-card">
+            <div class="edu-card-top">
+              <span class="edu-school-name">Commonwealth School</span>
+              <span class="edu-tag">2022 &ndash; 2026</span>
+            </div>
+            <div class="edu-degree-text">High School Diploma</div>
+            <div class="edu-location-text">Boston, MA</div>
+            <p class="edu-detail">
+              <strong>Relevant Coursework:</strong> Multivariable Calculus, Linear Algebra, Real Analysis, AP Calculus BC, AP Statistics, AP Computer Science A, Designing Programming Languages (CS 5).
+            </p>
+            <p class="edu-detail highlight-text">
+              Built 2 web applications deployed and actively used by over 200 students and teachers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skills Matrix -->
+        <div class="skills-matrix">
+          <div class="skill-category-row">
+            <span class="skill-label">Languages</span>
+            <div class="skill-pills">
+              <span class="pill">Python</span>
+              <span class="pill">C++</span>
+              <span class="pill">Mojo</span>
+              <span class="pill">Rust</span>
+              <span class="pill">Go</span>
+              <span class="pill">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skill-category-row">
+            <span class="skill-label">Tooling</span>
+            <div class="skill-pills">
+              <span class="pill">PyTorch</span>
+              <span class="pill">Google OR-Tools</span>
+              <span class="pill">JAX / Flax</span>
+              <span class="pill">LLVM</span>
+              <span class="pill">LightGBM</span>
+              <span class="pill">Optuna</span>
+            </div>
+          </div>
+
+          <div class="skill-category-row">
+            <span class="skill-label">Domains</span>
+            <div class="skill-pills">
+              <span class="pill">SIMD &amp; Static Traits</span>
+              <span class="pill">GPU Acceleration</span>
+              <span class="pill">Multi-Threading</span>
+              <span class="pill">Clustering Algorithms</span>
+              <span class="pill">Operations Research</span>
+              <span class="pill">Survival Analysis</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. SOFTWARE & SYSTEMS -->
+      <section id="projects" class="page-section">
+        <div class="section-title-wrap">
+          <h2 class="section-heading">Software &amp; Systems</h2>
+        </div>
+
+        <div class="projects-list">
+          <!-- Strata -->
+          <article class="project-entry">
+            <div class="project-top">
+              <div class="project-title-group">
+                <h3 class="project-heading">
+                  <a href="https://prefix.dev/channels/modular-community/packages/strata" target="_blank" rel="noopener" class="project-title-link">
+                    <span>Strata</span>
+                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </h3>
+                <span class="lang-pill">Mojo</span>
+              </div>
+              <a href="https://prefix.dev/channels/modular-community/packages/strata" target="_blank" rel="noopener" class="project-url-badge" title="View package on prefix.dev">
+                <span>prefix.dev</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              </a>
+            </div>
+            <p class="project-text">
+              A pure Mojo machine learning library built with Scikit-Learn ergonomics and 0 Python interop overhead. Implements Linear/Logistic Regression, Random Forests, and K-Means.
+            </p>
+            <ul class="project-bullets">
+              <li>Leverages compile-time traits, static polymorphism, and generic SIMD types across float/int bit-widths to optimize execution performance.</li>
+              <li>Integrates LAPACK and BLAS for dense linear algebra computation.</li>
+              <li>Accepted as one of the first 50 packages in Modular's official index on prefix.dev.</li>
+            </ul>
+            <div class="code-install">
+              <code>pixi add strata</code>
+            </div>
+          </article>
+
+          <!-- Kluster-Fudge -->
+          <article class="project-entry">
+            <div class="project-top">
+              <div class="project-title-group">
+                <h3 class="project-heading">
+                  <a href="https://pypi.org/project/kluster-fudge/" target="_blank" rel="noopener" class="project-title-link">
+                    <span>Kluster-Fudge</span>
+                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </h3>
+                <span class="lang-pill">Python</span>
+              </div>
+              <a href="https://pypi.org/project/kluster-fudge/" target="_blank" rel="noopener" class="project-url-badge" title="View package on PyPI">
+                <span>pypi.org</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              </a>
+            </div>
+            <p class="project-text">
+              High-performance categorical data clustering package implementing K-Modes with arbitrary categorical distance metrics (>3,000 downloads).
+            </p>
+            <ul class="project-bullets">
+              <li>Engineered custom multi-threading, GPU kernels, and JIT compilation paths to drastically outperform standard pure-Python categorical clustering packages.</li>
+            </ul>
+            <div class="code-install">
+              <code>pip install kluster-fudge</code>
+            </div>
+          </article>
+
+          <!-- cox-hazards -->
+          <article class="project-entry">
+            <div class="project-top">
+              <div class="project-title-group">
+                <h3 class="project-heading">
+                  <a href="https://crates.io/crates/cox-hazards" target="_blank" rel="noopener" class="project-title-link">
+                    <span>cox-hazards</span>
+                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </h3>
+                <span class="lang-pill">Rust</span>
+              </div>
+              <a href="https://crates.io/crates/cox-hazards" target="_blank" rel="noopener" class="project-url-badge" title="View crate on Crates.io">
+                <span>crates.io</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              </a>
+            </div>
+            <p class="project-text">
+              Systems-level Rust implementation of the Cox Proportional Hazards regression model for biostatistical survival analysis (~1,000 downloads).
+            </p>
+            <ul class="project-bullets">
+              <li>Implements both Newton-Raphson and AdamW numerical optimizers from scratch with L1 and L2 regularization for feature selection.</li>
+            </ul>
+            <div class="code-install">
+              <code>cargo add cox-hazards</code>
+            </div>
+          </article>
+
+          <!-- Kategorize -->
+          <article class="project-entry">
+            <div class="project-top">
+              <div class="project-title-group">
+                <h3 class="project-heading">
+                  <a href="https://crates.io/crates/kategorize" target="_blank" rel="noopener" class="project-title-link">
+                    <span>Kategorize</span>
+                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </h3>
+                <span class="lang-pill">Rust</span>
+              </div>
+              <a href="https://crates.io/crates/kategorize" target="_blank" rel="noopener" class="project-url-badge" title="View crate on Crates.io">
+                <span>crates.io</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              </a>
+            </div>
+            <p class="project-text">
+              Rust implementation of K-Modes and K-Prototypes clustering algorithms for purely categorical and mixed tabular data (~950 downloads).
+            </p>
+            <ul class="project-bullets">
+              <li>Parallelized over thread pools with intelligent distance matrix caching to eliminate duplicate pairwise metric evaluations.</li>
+            </ul>
+            <div class="code-install">
+              <code>cargo add kategorize</code>
+            </div>
+          </article>
+
+          <!-- CubeCL Contribution -->
+          <article class="project-entry">
+            <div class="project-top">
+              <div class="project-title-group">
+                <h3 class="project-heading">
+                  <a href="https://github.com/tracel-ai/cubecl" target="_blank" rel="noopener" class="project-title-link">
+                    <span>CubeCL (TracelAI)</span>
+                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </h3>
+                <span class="lang-pill">Rust</span>
+              </div>
+              <a href="https://github.com/tracel-ai/cubecl" target="_blank" rel="noopener" class="project-url-badge" title="View repository on GitHub">
+                <span>github.com</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              </a>
+            </div>
+            <p class="project-text">
+              Contributed an upstream bug fix to CubeCL, TracelAI's multi-platform GPU compute language extension and compiler for Rust (powering the Burn deep learning framework).
+            </p>
+          </article>
+
+          <!-- VEX Match Prediction -->
+          <article class="project-entry">
+            <div class="project-top">
+              <div class="project-title-group">
+                <h3 class="project-heading">
+                  <span>VEX Robotics Match Predictor</span>
+                </h3>
+                <span class="lang-pill">JAX</span>
+              </div>
+              <span class="project-metric">75% Prediction Accuracy</span>
+            </div>
+            <p class="project-text">
+              Deep learning architecture using a residual multi-layer perceptron (ResMLP) with Huber loss in JAX to forecast outcomes of competitive robotics matches.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. RESEARCH EXPERIENCE -->
+      <section id="research" class="page-section">
+        <div class="section-title-wrap">
+          <h2 class="section-heading">Research Experience</h2>
+        </div>
+
+        <div class="experience-block">
+          <div class="experience-top">
+            <div>
+              <h3 class="experience-title">Research Intern</h3>
+              <div class="experience-lab">MIT Jameel Clinic &bull; Cambridge, MA</div>
+            </div>
+            <div class="experience-period">Oct 2024 &ndash; Present</div>
+          </div>
+
+          <div class="experience-content">
+            <p class="experience-summary">
+              Computational machine learning research focused on oncology prognostics and high-dimensional healthcare data:
+            </p>
+            <ul class="experience-bullets">
+              <li>
+                <strong>Public Health Clustering &amp; Papers:</strong> Performed clustering analysis on complex public health datasets; co-authoring 2 papers currently in progress.
+              </li>
+              <li>
+                <strong>Hyperparameter Optimization:</strong> Formulated a novel method for identifying the optimal clustering from clusterings generated under varying hyperparameter configurations.
+              </li>
+              <li>
+                <strong>Model Replication &amp; Featurization:</strong> Replicated and computationally validated published cancer prediction models. Co-designed a custom featurizer for a cancer prognostic ML model with an MIT PostDoc.
+              </li>
+              <li>
+                <strong>Summer Program &amp; Hackathon Leadership:</strong> Co-organized a ~60 student summer camp about AI in healthcare (2025 and 2026); designed, planned, and led the summer program's hackathon.
+              </li>
+              <li>
+                <strong>Infrastructure Software:</strong> Built internal software infrastructure, including a program deployment map and an applicant review portal.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Colophon -->
+      <footer class="site-colophon">
+        <p>Ethan Wu &bull; <a href="mailto:ewu@u.northwestern.edu">ewu@u.northwestern.edu</a> &bull; (978) 493-4946</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
