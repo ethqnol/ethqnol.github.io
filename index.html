@@ -70,6 +70,11 @@
               </a>
             </li>
             <li>
+              <a href="/polars-mojo/">
+                /polars-mojo <span class="ext-arrow">↗</span>
+              </a>
+            </li>
+            <li>
               <a href="/chem">
                 /chem <span class="ext-arrow">↗</span>
               </a>
@@ -183,6 +188,7 @@
               <span class="pill">LLVM</span>
               <span class="pill">LightGBM</span>
               <span class="pill">Optuna</span>
+              <span class="pill">Docker</span>
             </div>
           </div>
 
@@ -195,6 +201,10 @@
               <span class="pill">Clustering Algorithms</span>
               <span class="pill">Operations Research</span>
               <span class="pill">Survival Analysis</span>
+              <span class="pill">C-FFI</span>
+              <span class="pill">Linux</span>
+              <span class="pill">Git</span>
+              <span class="pill">Optimizations</span>
             </div>
           </div>
         </div>
@@ -207,6 +217,51 @@
         </div>
 
         <div class="projects-list">
+          <!-- polars-mojo -->
+          <article class="project-entry">
+            <div class="project-top">
+              <div class="project-title-group">
+                <h3 class="project-heading">
+                  <a href="https://prefix.dev/channels/modular-community/packages/polars-mojo" target="_blank"
+                    rel="noopener" class="project-title-link">
+                    <span>polars-mojo</span>
+                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </h3>
+                <span class="lang-pill">Mojo</span>
+              </div>
+              <a href="https://prefix.dev/channels/modular-community/packages/polars-mojo" target="_blank"
+                rel="noopener" class="project-url-badge" title="View package on prefix.dev">
+                <span>prefix.dev</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17l9.2-9.2M17 17V8H8" />
+                </svg>
+              </a>
+            </div>
+            <p class="project-text">
+              Zero-copy interop between Mojo and the Rust Polars dataframe library via Apache Arrow C Data Interface.
+            </p>
+            <ul class="project-bullets">
+              <li>One of the first 60 libraries accepted into Modular’s official Modular-Community index on prefix.dev.
+              </li>
+              <li>Built zero-copy interop between Mojo and the Rust Polars dataframe library via Apache Arrow C Data
+                Interface.</li>
+              <li>Implemented an RAII wrapper to synchronize Mojo <code>__deinit__</code> with Arrow C release callbacks
+                to prevent leaks.</li>
+              <li>Implemented SIMD reduction kernels (sum, mean, std) via Mojo’s vectorize primitives.</li>
+            </ul>
+            <div class="code-install">
+              <code>pixi add polars-mojo</code>
+            </div>
+          </article>
+
           <!-- Strata -->
           <article class="project-entry">
             <div class="project-top">
@@ -236,12 +291,16 @@
               </a>
             </div>
             <p class="project-text">
-              A pure Mojo machine learning library built with Scikit-Learn ergonomics and 0 Python interop overhead.
+              A pure Mojo machine learning library built with Scikit-Learn ergonomics and zero Python runtime
+              dependencies.
               Implements Linear/Logistic Regression, Random Forests, and K-Means.
             </p>
             <ul class="project-bullets">
               <li>Leverages compile-time traits, static polymorphism, and generic SIMD types across float/int bit-widths
                 to optimize execution performance.</li>
+              <li>Outperforms Scikit-Learn by an average of 1.9× across models (<a
+                  href="https://ethqnol.github.io/strata-mojo/#explanation/benchmarks" target="_blank"
+                  rel="noopener">see benchmarks</a>).</li>
               <li>Integrates LAPACK and BLAS for dense linear algebra computation.</li>
               <li>Accepted as one of the first 50 packages in Modular's official index on prefix.dev.</li>
             </ul>
@@ -407,6 +466,40 @@
             </p>
           </article>
 
+          <!-- Modular Community Contribution -->
+          <article class="project-entry">
+            <div class="project-top">
+              <div class="project-title-group">
+                <h3 class="project-heading">
+                  <a href="https://github.com/modular/modular-community/pull/348" target="_blank" rel="noopener"
+                    class="project-title-link">
+                    <span>Modular Community &amp; Prefix Ecosystem</span>
+                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </h3>
+                <span class="lang-pill">Mojo</span>
+              </div>
+              <a href="https://github.com/modular/modular-community/pull/348" target="_blank" rel="noopener"
+                class="project-url-badge" title="View pull request on GitHub">
+                <span>github.com</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17l9.2-9.2M17 17V8H8" />
+                </svg>
+              </a>
+            </div>
+            <p class="project-text">
+              Resolved critical packaging automation failure by debugging and patching CI/CD scripts for the Mojo
+              toolchain in Modular AI's official community ecosystem.
+            </p>
+          </article>
+
           <!-- VEX Match Prediction -->
           <article class="project-entry">
             <div class="project-top">
@@ -449,7 +542,7 @@
             <ul class="experience-bullets">
               <li>
                 <strong>Public Health Clustering &amp; Papers:</strong> Performed clustering analysis on complex public
-                health datasets; co-authoring 2 papers currently in progress.
+                health datasets; co-authoring 2 in-progress papers targeting <em>PLOS One</em>.
               </li>
               <li>
                 <strong>Hyperparameter Optimization:</strong> Formulated a novel method for identifying the optimal
@@ -462,7 +555,10 @@
               </li>
               <li>
                 <strong>Summer Program &amp; Hackathon Leadership:</strong> Co-organized a ~60 student summer camp about
-                AI in healthcare (2025 and 2026); designed, planned, and led the summer program's hackathon.
+                AI in healthcare in 2025 and 2026 (<a
+                  href="https://www.linkedin.com/posts/aihealthmit_aiforgood-aiforhealth-healthcareinnovation-activity-7485749428822188032-32Uj?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAElWjb0BeuiziXt9Z3noeJLj7pmYcA5qm2Q"
+                  target="_blank" rel="noopener">see LinkedIn post</a>); designed, planned, and led the summer program's
+                hackathon.
               </li>
               <li>
                 <strong>Infrastructure Software:</strong> Built internal software infrastructure, including a program
