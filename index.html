@@ -47,11 +47,11 @@
           </a>
           <a href="#projects" class="nav-link">
             <span class="nav-line"></span>
-            <span class="nav-title">Software &amp; Systems</span>
+            <span class="nav-title">Projects &amp; Open Source</span>
           </a>
           <a href="#research" class="nav-link">
             <span class="nav-line"></span>
-            <span class="nav-title">Research Experience</span>
+            <span class="nav-title">Work Experience</span>
           </a>
         </nav>
 
@@ -89,7 +89,7 @@
 
         <!-- Sidebar Footer & Links -->
         <div class="sidebar-footer">
-          <a href="ewu-resume.pdf" class="resume-btn" download target="_blank" rel="noopener">
+          <a href="ewu-resume.pdf" class="resume-btn" target="_blank" rel="noopener">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4"></path>
@@ -130,6 +130,19 @@
     <!-- Right Column: Main Canvas Content -->
     <main class="main-canvas">
 
+      <!-- Top Action Bar: Separate Blog Button -->
+      <div class="canvas-top-bar">
+        <a href="blog.html" class="blog-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+          <span>Blog</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+      </div>
+
       <!-- 1. EDUCATION & SKILLS -->
       <section id="education" class="page-section">
         <div class="section-title-wrap">
@@ -141,26 +154,12 @@
           <div class="edu-card">
             <div class="edu-card-top">
               <span class="edu-school-name">Northwestern University</span>
-              <span class="edu-tag">2026 &ndash; 2030</span>
+              <span class="edu-tag">September 2026 &ndash; June 2030 (Anticipated)</span>
             </div>
             <div class="edu-degree-text">Computer Science &amp; Operations Research (IEMS)</div>
             <div class="edu-location-text">Evanston, IL</div>
-          </div>
-
-          <!-- Commonwealth -->
-          <div class="edu-card">
-            <div class="edu-card-top">
-              <span class="edu-school-name">Commonwealth School</span>
-              <span class="edu-tag">2022 &ndash; 2026</span>
-            </div>
-            <div class="edu-degree-text">High School Diploma</div>
-            <div class="edu-location-text">Boston, MA</div>
             <p class="edu-detail">
-              <strong>Relevant Coursework:</strong> Multivariable Calculus, Linear Algebra, Real Analysis, AP Calculus
-              BC, AP Statistics, AP Computer Science A, Designing Programming Languages (CS 5).
-            </p>
-            <p class="edu-detail highlight-text">
-              Built 2 web applications deployed and actively used by over 200 students and teachers.
+              <strong>NU Formula Racing (FSAE):</strong> Firmware engineer; using C to build high voltage battery management system.
             </p>
           </div>
         </div>
@@ -180,12 +179,13 @@
           </div>
 
           <div class="skill-category-row">
-            <span class="skill-label">Tooling</span>
+            <span class="skill-label">Tooling &amp; Frameworks</span>
             <div class="skill-pills">
               <span class="pill">PyTorch</span>
-              <span class="pill">Google OR-Tools</span>
-              <span class="pill">JAX / Flax</span>
               <span class="pill">LLVM</span>
+              <span class="pill">Cranelift</span>
+              <span class="pill">Google OR-Tools</span>
+              <span class="pill">Jax/Flax</span>
               <span class="pill">LightGBM</span>
               <span class="pill">Optuna</span>
               <span class="pill">Docker</span>
@@ -193,30 +193,63 @@
           </div>
 
           <div class="skill-category-row">
-            <span class="skill-label">Domains</span>
+            <span class="skill-label">Knowledge/Domains</span>
             <div class="skill-pills">
-              <span class="pill">SIMD &amp; Static Traits</span>
-              <span class="pill">GPU Acceleration</span>
               <span class="pill">Multi-Threading</span>
-              <span class="pill">Clustering Algorithms</span>
-              <span class="pill">Operations Research</span>
-              <span class="pill">Survival Analysis</span>
-              <span class="pill">C-FFI</span>
-              <span class="pill">Linux</span>
-              <span class="pill">Git</span>
               <span class="pill">Optimizations</span>
+              <span class="pill">Clustering Algorithms</span>
+              <span class="pill">ML</span>
+              <span class="pill">Git</span>
+              <span class="pill">Linux</span>
+              <span class="pill">SIMD</span>
+              <span class="pill">C-FFI</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 2. SOFTWARE & SYSTEMS -->
+      <!-- 2. PROJECTS & OPEN SOURCE CONTRIBUTIONS -->
       <section id="projects" class="page-section">
         <div class="section-title-wrap">
-          <h2 class="section-heading">Software &amp; Systems</h2>
+          <h2 class="section-heading">Projects &amp; Open Source Contributions</h2>
         </div>
 
         <div class="projects-list">
+          <!-- Mojo Compiler & STL -->
+          <article class="project-entry">
+            <div class="project-top">
+              <div class="project-title-group">
+                <h3 class="project-heading">
+                  <a href="https://github.com/modular/modular/pull/7311" target="_blank" rel="noopener"
+                    class="project-title-link">
+                    <span>Mojo Compiler &amp; STL [Contributor]</span>
+                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </h3>
+                <span class="lang-pill">Mojo</span>
+                <span class="lang-pill">C++</span>
+              </div>
+              <a href="https://github.com/modular/modular/pull/7311" target="_blank" rel="noopener"
+                class="project-url-badge" title="View pull request on GitHub">
+                <span>github.com</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17l9.2-9.2M17 17V8H8" />
+                </svg>
+              </a>
+            </div>
+            <ul class="project-bullets">
+              <li>Fixed LLVM codegen bug by mapping SIMD comparisons to FCMP UNE, correcting vector NaN evaluation</li>
+              <li>Wrote tests validating IR emission and SIMD lane boolean reduction behavior</li>
+            </ul>
+          </article>
+
           <!-- polars-mojo -->
           <article class="project-entry">
             <div class="project-top">
@@ -224,7 +257,7 @@
                 <h3 class="project-heading">
                   <a href="https://prefix.dev/channels/modular-community/packages/polars-mojo" target="_blank"
                     rel="noopener" class="project-title-link">
-                    <span>polars-mojo</span>
+                    <span>polars-mojo [Author]</span>
                     <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                       aria-hidden="true">
@@ -245,16 +278,9 @@
                 </svg>
               </a>
             </div>
-            <p class="project-text">
-              Zero-copy interop between Mojo and the Rust Polars dataframe library via Apache Arrow C Data Interface.
-            </p>
             <ul class="project-bullets">
-              <li>One of the first 60 libraries accepted into Modular’s official Modular-Community index on prefix.dev.
-              </li>
-              <li>Built zero-copy interop between Mojo and the Rust Polars dataframe library via Apache Arrow C Data
-                Interface.</li>
-              <li>Implemented an RAII wrapper to synchronize Mojo <code>__deinit__</code> with Arrow C release callbacks
-                to prevent leaks.</li>
+              <li>Built zero-copy interop between Mojo and the Rust Polars dataframe library via Apache Arrow C Data Interface</li>
+              <li>Implemented an RAII wrapper to synchronize Mojo <code>__deinit__</code> with Arrow C release callbacks to prevent leaks.</li>
               <li>Implemented SIMD reduction kernels (sum, mean, std) via Mojo’s vectorize primitives.</li>
             </ul>
             <div class="code-install">
@@ -269,7 +295,7 @@
                 <h3 class="project-heading">
                   <a href="https://prefix.dev/channels/modular-community/packages/strata" target="_blank" rel="noopener"
                     class="project-title-link">
-                    <span>Strata</span>
+                    <span>Strata [Author]</span>
                     <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                       aria-hidden="true">
@@ -290,23 +316,49 @@
                 </svg>
               </a>
             </div>
-            <p class="project-text">
-              A pure Mojo machine learning library built with Scikit-Learn ergonomics and zero Python runtime
-              dependencies.
-              Implements Linear/Logistic Regression, Random Forests, and K-Means.
-            </p>
             <ul class="project-bullets">
-              <li>Leverages compile-time traits, static polymorphism, and generic SIMD types across float/int bit-widths
-                to optimize execution performance.</li>
-              <li>Outperforms Scikit-Learn by an average of 1.9× across models (<a
-                  href="https://ethqnol.github.io/strata-mojo/#explanation/benchmarks" target="_blank"
-                  rel="noopener">see benchmarks</a>).</li>
-              <li>Integrates LAPACK and BLAS for dense linear algebra computation.</li>
-              <li>Accepted as one of the first 50 packages in Modular's official index on prefix.dev.</li>
+              <li>Developing a pure Mojo machine learning library with Sklearn ergonomics and zero Python runtime dependencies.</li>
+              <li>Leveraged strict traits, static polymorphism, and generic SIMD types across float/int bit-widths to optimize ML models (Linear models, Random Forests, K-Means). Average of 1.9 times faster than Sklearn. <a href="https://ethqnol.github.io/strata-mojo/#explanation/benchmarks" target="_blank" rel="noopener">See benchmarks</a></li>
+              <li>Applied LAPACK/BLAS to handle linear algebra computation.</li>
             </ul>
             <div class="code-install">
               <code>pixi add strata</code>
             </div>
+          </article>
+
+          <!-- Salmon Programming Language -->
+          <article class="project-entry">
+            <div class="project-top">
+              <div class="project-title-group">
+                <h3 class="project-heading">
+                  <a href="https://github.com/ethqnol/salmon" target="_blank" rel="noopener"
+                    class="project-title-link">
+                    <span>Salmon Programming Language [Author]</span>
+                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </h3>
+                <span class="lang-pill">C++</span>
+              </div>
+              <a href="https://github.com/ethqnol/salmon" target="_blank" rel="noopener" class="project-url-badge"
+                title="View repository on GitHub">
+                <span>github.com</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17l9.2-9.2M17 17V8H8" />
+                </svg>
+              </a>
+            </div>
+            <ul class="project-bullets">
+              <li>Built an end-to-end compiled language called Salmon, that targets native machine code via LLVM IR</li>
+              <li>Implemented SSA code-gen using LLVM C++ API with scope management &amp; dynamic list runtime structs.</li>
+              <li>Designed deterministic resource cleanup via a LIFO defer unwinding stack.</li>
+            </ul>
           </article>
 
           <!-- Kluster-Fudge -->
@@ -316,7 +368,7 @@
                 <h3 class="project-heading">
                   <a href="https://pypi.org/project/kluster-fudge/" target="_blank" rel="noopener"
                     class="project-title-link">
-                    <span>Kluster-Fudge</span>
+                    <span>Kluster-Fudge (PyPI) [Author]</span>
                     <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                       aria-hidden="true">
@@ -337,98 +389,12 @@
                 </svg>
               </a>
             </div>
-            <p class="project-text">
-              High-performance categorical data clustering package implementing K-Modes with arbitrary categorical
-              distance metrics (>3,000 downloads).
-            </p>
             <ul class="project-bullets">
-              <li>Engineered custom multi-threading, GPU kernels, and JIT compilation paths to drastically outperform
-                standard pure-Python categorical clustering packages.</li>
+              <li>A Python library for clustering categorical data using K-Modes with various distance metrics (<strong>3000+ downloads</strong>).</li>
+              <li>Implemented multi-threading, GPU acceleration, and JIT optimizations for better performance.</li>
             </ul>
             <div class="code-install">
               <code>pip install kluster-fudge</code>
-            </div>
-          </article>
-
-          <!-- cox-hazards -->
-          <article class="project-entry">
-            <div class="project-top">
-              <div class="project-title-group">
-                <h3 class="project-heading">
-                  <a href="https://crates.io/crates/cox-hazards" target="_blank" rel="noopener"
-                    class="project-title-link">
-                    <span>cox-hazards</span>
-                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                      aria-hidden="true">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </h3>
-                <span class="lang-pill">Rust</span>
-              </div>
-              <a href="https://crates.io/crates/cox-hazards" target="_blank" rel="noopener" class="project-url-badge"
-                title="View crate on Crates.io">
-                <span>crates.io</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 17l9.2-9.2M17 17V8H8" />
-                </svg>
-              </a>
-            </div>
-            <p class="project-text">
-              Systems-level Rust implementation of the Cox Proportional Hazards regression model for biostatistical
-              survival analysis (~1,000 downloads).
-            </p>
-            <ul class="project-bullets">
-              <li>Implements both Newton-Raphson and AdamW numerical optimizers from scratch with L1 and L2
-                regularization for feature selection.</li>
-            </ul>
-            <div class="code-install">
-              <code>cargo add cox-hazards</code>
-            </div>
-          </article>
-
-          <!-- Kategorize -->
-          <article class="project-entry">
-            <div class="project-top">
-              <div class="project-title-group">
-                <h3 class="project-heading">
-                  <a href="https://crates.io/crates/kategorize" target="_blank" rel="noopener"
-                    class="project-title-link">
-                    <span>Kategorize</span>
-                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                      aria-hidden="true">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                </h3>
-                <span class="lang-pill">Rust</span>
-              </div>
-              <a href="https://crates.io/crates/kategorize" target="_blank" rel="noopener" class="project-url-badge"
-                title="View crate on Crates.io">
-                <span>crates.io</span>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 17l9.2-9.2M17 17V8H8" />
-                </svg>
-              </a>
-            </div>
-            <p class="project-text">
-              Rust implementation of K-Modes and K-Prototypes clustering algorithms for purely categorical and mixed
-              tabular data (~950 downloads).
-            </p>
-            <ul class="project-bullets">
-              <li>Parallelized over thread pools with intelligent distance matrix caching to eliminate duplicate
-                pairwise metric evaluations.</li>
-            </ul>
-            <div class="code-install">
-              <code>cargo add kategorize</code>
             </div>
           </article>
 
@@ -439,7 +405,7 @@
                 <h3 class="project-heading">
                   <a href="https://github.com/tracel-ai/cubecl" target="_blank" rel="noopener"
                     class="project-title-link">
-                    <span>CubeCL (TracelAI)</span>
+                    <span>CubeCL (TracelAI) [Contributor]</span>
                     <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                       aria-hidden="true">
@@ -460,10 +426,9 @@
                 </svg>
               </a>
             </div>
-            <p class="project-text">
-              Contributed an upstream bug fix to CubeCL, TracelAI's multi-platform GPU compute language extension and
-              compiler for Rust (powering the Burn deep learning framework).
-            </p>
+            <ul class="project-bullets">
+              <li>Contributed upstream bug fix to CubeCL, a multi-platform GPU compute language extension for Rust.</li>
+            </ul>
           </article>
 
           <!-- Modular Community Contribution -->
@@ -473,7 +438,7 @@
                 <h3 class="project-heading">
                   <a href="https://github.com/modular/modular-community/pull/348" target="_blank" rel="noopener"
                     class="project-title-link">
-                    <span>Modular Community &amp; Prefix Ecosystem</span>
+                    <span>Modular Community &amp; Prefix Ecosystem (Modular AI) [Contributor]</span>
                     <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
                       aria-hidden="true">
@@ -494,35 +459,51 @@
                 </svg>
               </a>
             </div>
-            <p class="project-text">
-              Resolved critical packaging automation failure by debugging and patching CI/CD scripts for the Mojo
-              toolchain in Modular AI's official community ecosystem.
-            </p>
+            <ul class="project-bullets">
+              <li>Resolved critical packaging automation failure by debugging and patching CI/CD scripts for the Mojo toolchain.</li>
+            </ul>
           </article>
 
-          <!-- VEX Match Prediction -->
+          <!-- Rust ML Libraries -->
           <article class="project-entry">
             <div class="project-top">
               <div class="project-title-group">
                 <h3 class="project-heading">
-                  <span>VEX Robotics Match Predictor</span>
+                  <a href="https://crates.io/users/ethqnol" target="_blank" rel="noopener"
+                    class="project-title-link">
+                    <span>Rust ML Libraries (Crates.io) [Author]</span>
+                    <svg class="project-ext-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
                 </h3>
-                <span class="lang-pill">JAX</span>
+                <span class="lang-pill">Rust</span>
               </div>
-              <span class="project-metric">75% Prediction Accuracy</span>
+              <a href="https://crates.io/users/ethqnol" target="_blank" rel="noopener" class="project-url-badge"
+                title="View profile on Crates.io">
+                <span>crates.io</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17l9.2-9.2M17 17V8H8" />
+                </svg>
+              </a>
             </div>
-            <p class="project-text">
-              Deep learning architecture using a residual multi-layer perceptron (ResMLP) with Huber loss in JAX to
-              forecast outcomes of competitive robotics matches.
-            </p>
+            <ul class="project-bullets">
+              <li>Built Rust library for survival analysis and a library for K-Modes algorithm (<strong>combined 2000 downloads</strong>).</li>
+              <li>Implemented Newton-Raphson and AdamW optimizers, with L1/L2 regularization for feature selection.</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <!-- 3. RESEARCH EXPERIENCE -->
+      <!-- 3. WORK EXPERIENCE -->
       <section id="research" class="page-section">
         <div class="section-title-wrap">
-          <h2 class="section-heading">Research Experience</h2>
+          <h2 class="section-heading">Work Experience</h2>
         </div>
 
         <div class="experience-block">
@@ -531,39 +512,16 @@
               <h3 class="experience-title">Research Intern</h3>
               <div class="experience-lab">MIT Jameel Clinic &bull; Cambridge, MA</div>
             </div>
-            <div class="experience-period">Oct 2024 &ndash; Present</div>
+            <div class="experience-period">October 2024 &ndash; Present</div>
           </div>
 
           <div class="experience-content">
-            <p class="experience-summary">
-              Computational machine learning research focused on oncology prognostics and high-dimensional healthcare
-              data:
-            </p>
             <ul class="experience-bullets">
-              <li>
-                <strong>Public Health Clustering &amp; Papers:</strong> Performed clustering analysis on complex public
-                health datasets; co-authoring 2 in-progress papers targeting <em>PLOS One</em>.
-              </li>
-              <li>
-                <strong>Hyperparameter Optimization:</strong> Formulated a novel method for identifying the optimal
-                clustering from clusterings generated under varying hyperparameter configurations.
-              </li>
-              <li>
-                <strong>Model Replication &amp; Featurization:</strong> Replicated and computationally validated
-                published cancer prediction models. Co-designed a custom featurizer for a cancer prognostic ML model
-                with an MIT PostDoc.
-              </li>
-              <li>
-                <strong>Summer Program &amp; Hackathon Leadership:</strong> Co-organized a ~60 student summer camp about
-                AI in healthcare in 2025 and 2026 (<a
-                  href="https://www.linkedin.com/posts/aihealthmit_aiforgood-aiforhealth-healthcareinnovation-activity-7485749428822188032-32Uj?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAElWjb0BeuiziXt9Z3noeJLj7pmYcA5qm2Q"
-                  target="_blank" rel="noopener">see LinkedIn post</a>); designed, planned, and led the summer program's
-                hackathon.
-              </li>
-              <li>
-                <strong>Infrastructure Software:</strong> Built internal software infrastructure, including a program
-                deployment map and an applicant review portal.
-              </li>
+              <li>Performed clustering analysis on public health data; <strong>co-authoring 2 in-progress papers targeting PLOS One</strong>.</li>
+              <li>Developed novel method to find the best clustering from clusterings generated with different hyperparameters.</li>
+              <li>Replicated &amp; verified cancer prediction computational models in published papers.</li>
+              <li>Co-designed a custom featurizer for a cancer prognostic machine learning model with an MIT PostDoc.</li>
+              <li>Had several of my projects featured in an MIT blog post: <a href="https://jclinic.mit.edu/from-traffic-data-to-traits-how-a-slow-clustering-job-led-me-to-mojo/" target="_blank" rel="noopener">See Blog Post</a></li>
             </ul>
           </div>
         </div>

@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "catch-22-style-and-substance",
+    "file": "posts/catch-22-style-and-substance.md",
+    "title": "The Architecture of Absurdity in Catch-22",
+    "readTime": "4 min read",
+    "excerpt": "A potential temptation when analyzing writing is to treat style and substance separately. But Catch-22’s technical execution is not a series of arbitrary cyclical story lines—it is precisely engineered to describe a terrifying philosophy: that modern bureaucracy is a self-preserving, fake reality that distorts logic to ensure its immortality."
+  },
+  {
+    "slug": "traffic-data-to-traits-mojo",
+    "file": "posts/traffic-data-to-traits-mojo.md",
+    "title": "From Traffic Data to Traits: How a Slow Clustering Job Led Me to Mojo",
+    "readTime": "7 min read",
+    "crossPostNotice": "Cross-posted from MIT",
+    "crossPostUrl": "https://jclinic.mit.edu/from-traffic-data-to-traits-how-a-slow-clustering-job-led-me-to-mojo/",
+    "excerpt": "There’s a lot of beauty in software optimizations. It’s like building a mechanical Swiss watch; you strip away the abstractions until you can watch the logic work on the physical machine. Often, the most unassuming changes can squeeze unbelievable amounts of performance."
+  }
+]
